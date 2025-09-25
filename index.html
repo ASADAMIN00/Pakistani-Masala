@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pakistani Masala</title>
+  
+  <!-- Favicon (Logo in title) -->
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="description" content="Premium Pakistani masala: Biryani, Nihari, Karahi, Tikka & more. Shop online — fresh, fragrant, authentic." />
+  <style>
+    /* ---------- Reset & base ---------- */
+    :root{
+      --accent:#c33; --accent-2:#e67e22; --bg:#fff8f2; --card:#fff; --muted:#020202;
+      --glass: rgba(255,255,255,0.7);
+      --radius:14px;
+      --shadow: 0 6px 20px rgba(224, 201, 201, 0.08);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    .logo-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;background:linear-gradient(180deg,#fff 0%, #fff8f2 100%);color:#000000;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* ---------- Layout ---------- */
+    header{position:sticky;top:0;z-index:40;background:rgba(3, 130, 41, 0.85);backdrop-filter:blur(6px);border-bottom:1px solid rgba(253, 251, 251, 0.04)}
+    .nav{max-width:1100px;margin:0 auto;display:flex;gap:16px;align-items:center;padding:14px 18px}
+    .logo{display:flex;gap:10px;align-items:center}
+    .logo .mark{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:white;font-weight:700}
+    nav{margin-left:auto;display:flex;gap:12px}
+    .nav a.btn{padding:8px 14px;border-radius:10px;font-weight:600}
+    .nav a.ghost{color:var(--muted)}
+    .nav a.cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+
+    main{max-width:1100px;margin:26px auto;padding:0 18px}
+
+    /* ---------- Hero ---------- */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-bottom:28px}
+    .hero-card{background:var(--card);padding:28px;border-radius:18px;box-shadow:var(--shadow)}
+    .hero h1{margin:0 0 8px;font-size:32px;line-height:1.05}
+    .hero p{color:var(--muted);margin:0 0 16px}
+    .hero .cta-row{display:flex;gap:12px}
+    .search{display:flex;gap:8px;background:var(--bg);padding:8px;border-radius:12px}
+    .search input{border:0;background:transparent;outline:none;font-size:16px}
+
+    /* ---------- Products ---------- */
+    .section{margin-bottom:28px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+    .card{background:var(--card);padding:12px;border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;height:100%}
+    .card img{border-radius:10px;height:160px;object-fit:cover}
+    .card h3{margin:10px 0 4px;font-size:18px}
+    .price-row{display:flex;justify-content:space-between;align-items:center;margin-top:auto}
+    .price{font-weight:700;color:var(--accent)}
+    .add{padding:8px 10px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;border:0}
+
+    /* ---------- About ---------- */
+    .about{display:flex;gap:20px;align-items:center}
+    .about .text{flex:1}
+    .about .image{width:320px;border-radius:14px;overflow:hidden}
+
+    /* ---------- Contact ---------- */
+    .contact-form{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow);max-width:700px}
+    .row{display:flex;gap:10px}
+    .field{display:flex;flex-direction:column;margin-bottom:10px}
+    label{font-size:13px;color:var(--muted);margin-bottom:6px}
+    input,textarea,select{padding:10px;border-radius:8px;border:1px solid rgba(237, 234, 234, 0.07);outline:none;font-size:15px}
+    textarea{min-height:120px;resize:vertical}
+    .submit{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;border:0}
+
+    /* ---------- Footer ---------- */
+    footer{margin-top:36px;padding:22px 18px;border-top:1px solid rgba(0,0,0,0.04);text-align:center;color:var(--muted)}
+
+    /* ---------- Responsive ---------- */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .about{flex-direction:column}
+      .logo .mark{width:40px;height:40px}
+    }
+
+    /* ---------- small utilities ---------- */
+    .badge{background:rgba(230,126,34,0.12);color:var(--accent-2);padding:6px 10px;border-radius:999px;font-weight:700}
+    .center{display:grid;place-items:center}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <<div class="logo">
+  <img src="logo.png" alt="Pakistani Masala" class="logo-img" />
+  <div>
+    <div style="font-weight:700">Pakistani Masala</div>
+    <div style="font-size:12px;color:var(--muted)">Fresh. Fragrant. Authentic.</div>
+  </div>
+</div>
+
+      <nav>
+        <a href="#home" class="btn ghost" data-link>Home</a>
+        <a href="#products" class="btn ghost" data-link>Products</a>
+        <a href="#about" class="btn ghost" data-link>About</a>
+        <a href="#contact" class="btn ghost" data-link>Contact</a>
+        <a href="#cart" class="btn cta" data-link>Cart (<span id="cartCount">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME / HERO -->
+    <section id="home" class="hero section">
+      <div class="hero-card">
+        <span class="badge">Handmade blends</span>
+        <h1>Taste the soul of real Pakistani masala</h1>
+        <p>Small-batch spice blends made from premium ingredients — perfect for Biryani, Nihari, Karahi, Tikka and more.</p>
+        <div class="cta-row">
+          <button class="cta" onclick="scrollToSection('products')">Shop Masala</button>
+          <div class="search" style="flex:1">
+            <input id="search" placeholder="Search masala (e.g. Biryani)" oninput="renderProducts()" />
+            <button class="add" onclick="clearSearch()">Clear</button>
+          </div>
+        </div>
+        <p style="margin-top:14px;color:var(--muted)">Free delivery on orders above PKR 1200 within Pakistan.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="hero-card center">
+          <img src="sample.png" alt="Assorted spices" style="height:210px;object-fit:cover;border-radius:12px"/>
+        </div>
+        <div class="hero-card">
+          <h3>Our promise</h3>
+          <p style="color:var(--muted);margin-top:6px">No artificial colors, no preservatives — only sun-dried whole spices, ground fresh in small batches.</p>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <div style="flex:1;background:linear-gradient(180deg,#fff,#fff8f2);padding:10px;border-radius:10px;text-align:center">
+              <div style="font-weight:800">100% Natural</div>
+              <div style="font-size:12px;color:var(--muted)">No additives</div>
+            </div>
+            <div style="flex:1;background:linear-gradient(180deg,#fff,#fff8f2);padding:10px;border-radius:10px;text-align:center">
+              <div style="font-weight:800">Small Batches</div>
+              <div style="font-size:12px;color:var(--muted)">Fresh every week</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="section">
+      <h2>Our Masala Collection</h2>
+      <p style="color:var(--muted);margin-top:6px">Click Add to Cart to collect your favourites. Prices shown in PKR.</p>
+      <div id="productsGrid" class="grid" style="margin-top:12px"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About Pakistani Masala</h2>
+      <div class="about" style="margin-top:10px">
+        <div class="text">
+          <p>Pakistani Masala is a family-run spice maker. For three generations we've hand-selected whole spices from trusted growers across Pakistan and processed them in small batches to preserve aroma and potency.</p>
+          <ul style="color:var(--muted)">
+            <li>Locally sourced ingredients</li>
+            <li>Traditional recipes & modern food-safety standards</li>
+            <li>Eco-friendly packaging</li>
+          </ul>
+          <p style="color:var(--muted)">Looking for bulk or private-label? <strong>Contact us</strong> from the form below.</p>
+        </div>
+        <div class="image">
+          <img src="online.png" alt="Spice jars"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact Us</h2>
+      <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:10px">
+              <div style="flex:1;min-width:260px;align-self:flex-start">
+          <div style="background:var(--card);padding:16px;border-radius:12px;box-shadow:var(--shadow)">
+            <h4>Visit / Call</h4>
+            <p style="color:var(--muted);margin:6px 0">Online Business, Karachi<br>Phone: +92 307 8995637<br>Email: pakistanimasala@gmail.com</p>
+            <h4>Opening hours</h4>
+            <p style="color:var(--muted);margin:6px 0">Mon - Sat: 12:00PM - 12:00AM<br>Sun: Closed</p>
+            <div style="margin-top:8px">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CART (simple modal-like section) -->
+    <section id="cart" class="section">
+      <h2>Your Cart</h2>
+      <div id="cartList" style="margin-top:12px"></div>
+      <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
+        <div style="font-size:18px;font-weight:700">Total: PKR <span id="cartTotal">0</span></div>
+        <button class="submit" onclick="checkout()">Checkout</button>
+        <button class="add" onclick="clearCart()">Clear Cart</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Pakistani Masala — All rights reserved. MUHAMMAD ASAD AMIN
+  </footer>
+
+  <script>
+    // ---------- Data (products) ----------
+    const PRODUCTS = [
+      {id:'Laal Mirch Powder',name:'Laal Mirch Powder',price:110,desc:'Aromatic Laal blend — cumin, cloves, cardamom, mace, star anise.',img:'https://5.imimg.com/data5/SELLER/Default/2022/12/RY/UU/ZG/21499398/lal-mirch-powder.jpeg'},
+      {id:'Dhania Powder',name:'Dhania Powder',price:90,desc:'Aromatic Dhania blend — cumin, cloves, cardamom, mace, star anise.',img:'https://5.imimg.com/data5/ANDROID/Default/2020/12/VU/YY/HQ/91237286/product-jpeg.jpg'},
+      {id:'Haldi Powder',name:'Haldi Powder',price:100,desc:'Aromatic Haldi blend — cumin, cloves, cardamom, mace, star anise.',img:'https://thumbs.dreamstime.com/b/organic-dry-turmeric-haldi-powder-also-known-as-curcuma-longa-linn-selective-focus-spice-pile-bowl-whole-191159061.jpg'},
+      {id:'Kashmiri Chilli Powder',name:'Kashmiri Chilli Powder',price:190,desc:'Aromatic Kashmiri Chilli Powder blend — cumin, cloves, cardamom, mace, star anise.',img:'https://static-01.daraz.pk/p/5e543c09c4be8b20438dc59078987701.jpg'},
+      {id:'biryani',name:'Biryani Masala',price:140,desc:'Aromatic biryani blend — cumin, cloves, cardamom, mace, star anise.',img:'https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/hap0jhzaxippdt6r1nie'},
+      {id:'nihari',name:'Nihari Masala',price:140,desc:'Rich nihari mix — black pepper, cardamom, cinnamon and roasted spices.',img:'https://soyummyrecipes.com/wp-content/uploads/2022/03/Nihari.jpg'},
+      {id:'karahi',name:'Karahi Masala',price:140,desc:'Tangy karahi masala for tomato-based curries and stir-fries.',img:'https://www.relishthebite.com/wp-content/uploads/2021/02/Chicken_Karahi-4.jpg'},
+      {id:'tikka',name:'Tikka Boti Masala',price:140,desc:'Smoky tikka blend for perfect char and aroma.',img:'https://www.masala.tv/wp-content/uploads/2017/06/maxresdefault-3-1024x576.jpg'},
+      {id:'kofta',name:'Kofta / Keema Masala',price:140,desc:'Balanced spices for koftas and minced meat dishes.',img:'https://kitchenofdebjani.com/wp-content/uploads/2024/11/Paneer-Kofta-Recipe-Debjanir-Rannaghar-500x500.jpg'},
+      {id:'tea',name:'Tea (Chai) Masala',price:300,desc:'Warm cardamom and cinnamon notes for tea lovers.',img:'https://budleaf.com/wp-content/uploads/2023/04/How-to-make-masala-chai-scaled.jpeg'}
+];
+
+    // ---------- Simple cart stored in localStorage ----------
+    const CART_KEY = 'pm_cart_v1';
+    let cart = JSON.parse(localStorage.getItem(CART_KEY) || '{}');
+
+    // ---------- Utilities ----------
+    function $(s){return document.querySelector(s)}
+    function $all(s){return document.querySelectorAll(s)}
+
+    // ---------- Render products ----------
+    function renderProducts(){
+      const q = ($('#search').value || '').toLowerCase();
+      const grid = $('#productsGrid'); grid.innerHTML = '';
+      const list = PRODUCTS.filter(p=> p.name.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q));
+      list.forEach(p=>{
+        const el = document.createElement('div'); el.className='card';
+        el.innerHTML = `
+          <img src="${p.img}" alt="${p.name}" />
+          <h3>${p.name}</h3>
+          <div style="color:var(--muted);font-size:14px">${p.desc}</div>
+          <div class="price-row">
+            <div>
+              <div class="price">PKR ${p.price}</div>
+              <div style="font-size:12px;color:var(--muted)">100g pack</div>
+            </div>
+            <div>
+              <button class="add" onclick="addToCart('${p.id}')">Add</button>
+            </div>
+          </div>`;
+        grid.appendChild(el);
+      })
+    }
+
+    function clearSearch(){ $('#search').value=''; renderProducts(); }
+
+    // ---------- Cart functions ----------
+    function saveCart(){ localStorage.setItem(CART_KEY, JSON.stringify(cart)); renderCart(); }
+    function addToCart(id){
+      cart[id] = (cart[id]||0)+1; saveCart(); flash(`Added to cart`);
+    }
+    function removeFromCart(id){ delete cart[id]; saveCart(); }
+    function changeQty(id,delta){ cart[id] = Math.max(0,(cart[id]||0)+delta); if(cart[id]===0) delete cart[id]; saveCart(); }
+    function clearCart(){ cart = {}; saveCart(); flash('Cart cleared'); }
+
+    function renderCart(){
+      $('#cartCount').textContent = Object.values(cart).reduce((s,n)=>s+n,0);
+      const list = $('#cartList'); list.innerHTML='';
+      let total=0;
+      if(Object.keys(cart).length===0){ list.innerHTML = '<div style="color:var(--muted)">Your cart is empty. Add some masalas!</div>'; }
+      else{
+        for(const id of Object.keys(cart)){
+          const p = PRODUCTS.find(x=>x.id===id); const qty = cart[id];
+          const row = document.createElement('div'); row.style.display='flex';row.style.gap='12px';row.style.alignItems='center';row.style.marginBottom='8px';
+          row.innerHTML = `
+            <img src="${p.img}" style="width:80px;height:60px;object-fit:cover;border-radius:8px" />
+            <div style="flex:1">
+              <div style="font-weight:700">${p.name}</div>
+              <div style="color:var(--muted);font-size:13px">PKR ${p.price} x ${qty}</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-weight:700">PKR ${p.price*qty}</div>
+              <div style="margin-top:6px;display:flex;gap:6px;justify-content:flex-end">
+                <button class="ghost" onclick="changeQty('${id}',-1)">-</button>
+                <div style="padding:6px 8px;background:var(--bg);border-radius:8px">${qty}</div>
+                <button class="add" onclick="changeQty('${id}',1)">+</button>
+              </div>
+            </div>`;
+          list.appendChild(row);
+          total += p.price*qty;
+        }
+      }
+      $('#cartTotal').textContent = total;
+      // update cart count in header
+    }
+function checkout(){
+  if(Object.keys(cart).length===0){
+    flash('Cart is empty');
+    return;
+  }
+
+  // Prepare message from cart
+  let msg = "🛒 New Masala Order:%0A";
+  let total = 0;
+  for(const id of Object.keys(cart)){
+    const p = PRODUCTS.find(x=>x.id===id);
+    const qty = cart[id];
+    total += p.price * qty;
+    msg += `• ${p.name} x ${qty} = PKR ${p.price*qty}%0A`;
+  }
+  msg += `%0ATotal: PKR ${total}`;
+
+  // Replace with your WhatsApp number (without + or dashes)
+  let phone = "923078995637"; // Example: 92 = Pakistan code, then your number
+  let url = `https://wa.me/${phone}?text=${msg}`;
+
+  // Open WhatsApp
+  window.open(url, "_blank");
+}
+
+    // ---------- Contact form ----------
+    function submitContact(e){ e.preventDefault();
+      const data = {name:$('#name').value, phone:$('#phone').value, email:$('#email').value, message:$('#message').value};
+      // In production send to backend. Here we show a success message.
+      $('#contactMsg').textContent = 'Message sent. We will contact you soon.';
+      setTimeout(()=>$('#contactMsg').textContent='',4000);
+      $('#contactForm').reset();
+    }
+
+    // ---------- Navigation (single page anchor navigation) ----------
+    document.querySelectorAll('[data-link]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault(); const hash = a.getAttribute('href').slice(1);
+        scrollToSection(hash);
+      });
+    });
+    function scrollToSection(id){ location.hash = id; const el = document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth',block:'start'}); }
+
+    // ---------- small helpers ----------
+    function flash(msg){
+      const el = document.createElement('div'); el.textContent=msg; el.style.position='fixed'; el.style.right='18px'; el.style.bottom='18px'; el.style.background='rgba(0,0,0,0.8)'; el.style.color='white'; el.style.padding='10px 14px'; el.style.borderRadius='10px'; el.style.zIndex=9999; document.body.appendChild(el);
+      setTimeout(()=>el.remove(),2000);
+    }
+
+    // ---------- init ----------
+    function init(){
+      document.getElementById('year').textContent = new Date().getFullYear();
+      renderProducts(); renderCart();
+      // if location hash exists, scroll
+      if(location.hash) setTimeout(()=>{const id=location.hash.slice(1); const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth'})},200);
+    }
+    init();
+  </script>
+</body>
+</html>
